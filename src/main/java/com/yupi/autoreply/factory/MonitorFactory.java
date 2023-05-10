@@ -8,8 +8,8 @@ import com.yupi.autoreply.monitor.ZsxqMonitor;
 /**
  * 监视者工厂
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * @author
+ * @from
  */
 public class MonitorFactory {
 

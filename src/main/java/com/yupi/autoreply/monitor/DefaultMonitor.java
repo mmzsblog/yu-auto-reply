@@ -6,8 +6,8 @@ import com.yupi.autoreply.model.TaskListItem;
 /**
  * 默认监控者
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * @author
+ * @from
  */
 public class DefaultMonitor extends Monitor {
 
