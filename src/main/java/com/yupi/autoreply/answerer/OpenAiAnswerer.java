@@ -1,5 +1,6 @@
 package com.yupi.autoreply.answerer;
 
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.yupi.autoreply.api.openai.OpenAiApi;
 import com.yupi.autoreply.api.openai.model.CreateCompletionRequest;
@@ -36,6 +37,9 @@ public class OpenAiAnswerer implements Answerer {
         request.setMax_tokens(1024);
         CreateCompletionResponse response = openAiApi.createCompletion(request, openAiConfig.getApiKey());
         log.info("OpenAi响应结果是：" + JSONUtil.toJsonStr(response));
+        if (StrUtil.isBlank(JSONUtil.toJsonStr(response))) {
+            return "";
+        }
         List<CreateCompletionResponse.ChoicesItem> choicesItemList = response.getChoices();
         String answer = choicesItemList.stream()
                 .map(CreateCompletionResponse.ChoicesItem::getText)
