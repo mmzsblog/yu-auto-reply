@@ -30,7 +30,5 @@ public class MainApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         OpenAiConfig openAiConfig = SpringContextUtils.getBean(OpenAiConfig.class);
         ZsxqConfig zsxqConfig = SpringContextUtils.getBean(ZsxqConfig.class);
-        log.info("OpenAi 配置 {}", zsxqConfig);
-        log.info("知识星球配置 {}", openAiConfig);
     }
 }
