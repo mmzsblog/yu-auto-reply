@@ -36,9 +36,11 @@ public class OpenAiAnswerer implements Answerer {
         request.setTemperature(0);
         request.setMax_tokens(1024);
         CreateCompletionResponse response = openAiApi.createCompletion(request, openAiConfig.getApiKey());
+        log.info("================================");
         log.info("OpenAi响应结果是：" + JSONUtil.toJsonStr(response));
+        log.info("================================");
         if (StrUtil.isBlank(JSONUtil.toJsonStr(response))) {
-            return "我无法理解你的问题……";
+            return "";
         }
         List<CreateCompletionResponse.ChoicesItem> choicesItemList = response.getChoices();
         String answer = choicesItemList.stream()
