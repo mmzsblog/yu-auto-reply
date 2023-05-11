@@ -22,7 +22,7 @@ class OpenAiApiTest {
     @Resource
     private OpenAiApi openAiApi;
 
-    private static final String OPENAI_API_KEY = "你的 OPENAI_API_KEY";
+    private static final String OPENAI_API_KEY = "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";
 
     @Test
     void createCompletion() {

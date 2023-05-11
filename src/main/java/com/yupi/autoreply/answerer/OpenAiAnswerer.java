@@ -1,6 +1,7 @@
 package com.yupi.autoreply.answerer;
 
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.http.HttpRequest;
 import cn.hutool.json.JSONUtil;
 import com.yupi.autoreply.api.openai.OpenAiApi;
 import com.yupi.autoreply.api.openai.model.CreateCompletionRequest;
@@ -30,6 +31,12 @@ public class OpenAiAnswerer implements Answerer {
 
     @Override
     public String doAnswer(String prompt) {
+        HttpRequest httpRequest = HttpRequest.get("https://api.openai.com/v1/models");
+        log.info("================================");
+        log.info("OpenAi响应可用模型是：" + JSONUtil.toJsonStr(httpRequest));
+        log.info("================================");
+
+
         CreateCompletionRequest request = new CreateCompletionRequest();
         request.setPrompt(prompt);
         request.setModel(openAiConfig.getModel());
