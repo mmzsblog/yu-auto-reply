@@ -2,7 +2,7 @@
 
 > 作者：[程序员鱼皮](https://github.com/liyupi)
 > 
-> 编程学习圈：[编程导航知识星球](https://yupi.icu)
+> 项目原始地址：[https://github.com/liyupi/yu-auto-reply](https://github.com/liyupi/yu-auto-reply)
 
 [toc]
 
@@ -124,7 +124,7 @@ task:
 
 如有项目本身的问题，欢迎提 issues 和 PR；
 
-如有编程方面的问题、或者需要项目教学，请看 [编程导航知识星球](https://yupi.icu)
+项目原始地址：[https://github.com/liyupi/yu-auto-reply](https://github.com/liyupi/yu-auto-reply)
 
 
 ## 问答
