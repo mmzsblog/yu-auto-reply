@@ -30,7 +30,7 @@ public class OpenAiApi {
         if (StringUtils.isBlank(openAiApiKey)) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "未传 openAiApiKey");
         }
-        String url = "https://api.openai.com/v1/chat/completions";
+        String url = "https://api.openai.com/v1/completions";
         String json = JSONUtil.toJsonStr(request);
         String result = HttpRequest.post(url)
                 .header("Authorization", "Bearer " + openAiApiKey)
