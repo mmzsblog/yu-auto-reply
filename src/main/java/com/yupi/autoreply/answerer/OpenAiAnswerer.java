@@ -31,17 +31,11 @@ public class OpenAiAnswerer implements Answerer {
 
     @Override
     public String doAnswer(String prompt) {
-        HttpRequest httpRequest = HttpRequest.get("https://api.openai.com/v1/models?apiKey="+openAiConfig.getApiKey());
-        log.info("================================");
-        log.info("OpenAi响应可用模型是：" + JSONUtil.toJsonStr(httpRequest));
-        log.info("================================");
-
-
         CreateCompletionRequest request = new CreateCompletionRequest();
         request.setPrompt(prompt);
         request.setModel(openAiConfig.getModel());
         request.setTemperature(0);
-        request.setMax_tokens(1024);
+        request.setMax_tokens(2048);
         CreateCompletionResponse response = openAiApi.createCompletion(request, openAiConfig.getApiKey());
         log.info("================================");
         log.info("OpenAi响应结果是：" + JSONUtil.toJsonStr(response));
