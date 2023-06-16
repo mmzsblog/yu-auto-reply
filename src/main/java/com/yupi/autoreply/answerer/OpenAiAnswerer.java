@@ -35,7 +35,7 @@ public class OpenAiAnswerer implements Answerer {
         request.setPrompt(prompt);
         request.setModel(openAiConfig.getModel());
         request.setTemperature(0);
-        request.setMax_tokens(2048);
+        request.setMax_tokens(4096);
         CreateCompletionResponse response = openAiApi.createCompletion(request, openAiConfig.getApiKey());
         log.info("================================");
         log.info("OpenAi响应结果是：" + JSONUtil.toJsonStr(response));
